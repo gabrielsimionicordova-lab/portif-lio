@@ -1,0 +1,27 @@
+body{
+    background-color: darkviolet;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+}
+
+.PrinDiv{
+    height: 600px;
+    width: 900px;
+    background-color: rgb(118, 10, 157);
+    border-radius: 6%;
+    border-color: rgb(71, 7, 95);
+    
+    
+}
+
+a{
+    text-decoration: none;
+    color: rgb(61, 1, 1);
+
+}
+
+li{
+    display: inline-block;
+}
