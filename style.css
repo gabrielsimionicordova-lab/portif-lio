@@ -7,7 +7,7 @@ body{
 }
 
 .PrinDiv{
-    height: 600px;
+    height: 400px;
     width: 900px;
     background-color: rgb(118, 10, 157);
     border-radius: 6%;
@@ -24,4 +24,8 @@ a{
 
 li{
     display: inline-block;
+}
+
+img{
+    width: 250px;
 }

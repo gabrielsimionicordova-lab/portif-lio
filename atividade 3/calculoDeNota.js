@@ -7,6 +7,10 @@ function calcular() {
     nota2tri = Number(prompt("qual foi sua nota no segundo trimestre?"));
 
     resultado = 180 - (nota1tri + nota2tri);
-
-    alert(resultado);
+    
+    if(resultado <= 0){
+        alert ("você ta aprovado fi, parabéns!!");
+    } else{
+        alert ("estuda mais fi ou vai ficar igual o kauã, faltou " + resultado + " pra você passar");
+    }
 }
