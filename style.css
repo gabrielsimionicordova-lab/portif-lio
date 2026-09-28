@@ -7,19 +7,26 @@ body{
 }
 
 .PrinDiv{
-    height: 400px;
+    height: 600px;
     width: 900px;
-    background-color: rgb(118, 10, 157);
+    background-color: rgba(118, 10, 157, 0.578);
     border-radius: 6%;
     border-color: rgb(95, 8, 126);
-    
     
 }
 
 a{
-    text-decoration: none;
-    color: rgb(112, 4, 4);
+    color: rgb(255, 255, 255);
+    background-color: rgb(129, 8, 242);
+    width: 80px;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: 1s all;
 
+}
+a p:hover{
+    background-color: burlywood;
+    transform: scale(1,2);
 }
 
 li{
@@ -28,4 +35,5 @@ li{
 
 img{
     width: 250px;
+    border-radius: 5%;
 }
