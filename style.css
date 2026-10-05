@@ -4,6 +4,8 @@ body{
     align-items: center;
     text-align: center;
     display: grid;
+    background-image: url(wproxo.jfif);
+    background-size: 112%;
 }
 
 .PrinDiv{
@@ -18,7 +20,7 @@ body{
 a{
     color: rgb(255, 255, 255);
     background-color: rgb(129, 8, 242);
-    width: 80px;
+    width: 100px;
     border-radius: 10%;
     cursor: pointer;
     transition: 1s all;
@@ -26,7 +28,8 @@ a{
 }
 a p:hover{
     background-color: burlywood;
-    transform: scale(1,2);
+    transform: scale(1,2.6);
+    border-radius: 10%
 }
 
 li{
@@ -36,4 +39,14 @@ li{
 img{
     width: 250px;
     border-radius: 5%;
+}
+
+button{
+    border-radius: 10%;
+    color: rgb(4, 4, 4);
+    background-color: rgb(224, 10, 224);
+}
+
+p{
+    color: white;
 }
