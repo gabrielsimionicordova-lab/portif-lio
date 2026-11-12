@@ -1,0 +1,52 @@
+body{
+    background-color: darkviolet;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    background-image: url(wproxo.jfif);
+    background-size: 112%;
+}
+
+.PrinDiv{
+    height: 600px;
+    width: 900px;
+    background-color: rgba(118, 10, 157, 0.578);
+    border-radius: 6%;
+    border-color: rgb(95, 8, 126);
+    
+}
+
+a{
+    color: rgb(255, 255, 255);
+    background-color: rgb(129, 8, 242);
+    width: 100px;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: 1s all;
+
+}
+a p:hover{
+    background-color: burlywood;
+    transform: scale(1,2.6);
+    border-radius: 10%
+}
+
+li{
+    display: inline-block;
+}
+
+img{
+    width: 250px;
+    border-radius: 5%;
+}
+
+button{
+    border-radius: 10%;
+    color: rgb(4, 4, 4);
+    background-color: rgb(224, 10, 224);
+}
+
+p{
+    color: white;
+}
