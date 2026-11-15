@@ -45,3 +45,29 @@ button{
 p{
     color: white;
 }
+
+.hades {
+    position: fixed;
+    background-color: #050505;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    height: 50px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+    box-shadow: 0 0 12px rgba(0, 255, 65, 0.4);
+    z-index: 9999;
+    animation: surgirItem 0.4s ease-out;
+  }
+
+  a.item-secreto-arg:hover {
+    background-color: #00ff41;
+    color: #050505;
+  }
+
+  @keyframes surgirItem {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

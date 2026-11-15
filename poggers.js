@@ -1,34 +1,54 @@
-function favorito(){
-    let resultado = prompt("você prefere batata ou batata doce?");
-    let batata = "batata";
-    let doce = "batata doce";
-    let codigo1 = "wsdda";
-    let codigo2 = "assdw";
-    let codigo3 = "dsdsw";
-    let codigo4 = "dwdws";
-    let codigo5 = "wddsa";
-    let cofigo6 = "swdwa";
-    let codigo7 = "sawds";
-    let codigoPS2;
+(function() {
+    // --- LISTA DE SEGREDOS ---
+    // Cada palavra executa uma ação específica quando digitada
+    const segredosARG = {
+      "terminal": () => {
+        document.getElementById("terminal").style.display = "inline-block";
+      },
+      "nero": () => {
+        document.getElementById("nero").style.display = "inline-block";
+      },
+      "verdade": () => {
+        const msg = document.getElementById("");
+        msg.style.display = "block";
 
-if(batata == resultado){
-    alert ("WOW você tem um otimo gosto")
-}else if(doce == resultado){
-    alert ("SEU MONSTRO!!!!")
-}else if(codigo1 == resultado){
-    (function() {
-  const style = document.createElement('style');
-  style.innerHTML = `body {
-      transition: transform 4s ease-in-out;
-      transform: rotate(1turn);
-    }`;
-  document.head.appendChild(style);
-  setTimeout(() => {
-    style.remove();
-  }, 4000);
-})();
-}
-else{
-    alert ("essa opção não esta na pergunta")
-}
-}
+        setTimeout(() => { msg.style.display = "none"; }, 4000);
+      },
+      "sinal": () => {
+
+        const audio = new Audio("estatica.mp3");
+        audio.play();
+      },
+      "apagar": () => {
+
+        document.querySelectorAll(".hades").forEach(el => {
+          el.style.display = "none";
+        });
+      }
+    };
+
+    const tamanhoMaximo = Math.max(...Object.keys(segredosARG).map(p => p.length));
+    let historicoTeclas = "";
+
+    document.addEventListener("keydown", (event) => {
+      const tag = event.target.tagName.toLowerCase();
+      if (tag === "input" || tag === "textarea") return;
+
+      if (event.key.length === 1) {
+        historicoTeclas += event.key.toLowerCase();
+
+        if (historicoTeclas.length > tamanhoMaximo) {
+          historicoTeclas = historicoTeclas.slice(-tamanhoMaximo);
+        }
+
+        // Verifica se o final digitado bate com algum segredo da lista
+        for (const [palavra, acao] of Object.entries(segredosARG)) {
+          if (historicoTeclas.endsWith(palavra)) {
+            acao(); // Executa a ação correspondente
+            historicoTeclas = "";
+            break;
+          }
+        }
+      }
+    });
+  })();
