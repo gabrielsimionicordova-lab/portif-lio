@@ -3,7 +3,7 @@
       "espelho": { pista: "1 = n", gif: "olho.gif" },
       "sombra":  { pista: "2 = e", gif: "olho.gif" },
       "vozes":   { pista: "3 = r", gif: "olho.gif" },
-      "maquina": { pista: "4 = o", gif: "olho.gif" },
+      "anjo": { pista: "4 = o", gif: "olho.gif" },
     };
 
     const tempoDoGif = 2000;   

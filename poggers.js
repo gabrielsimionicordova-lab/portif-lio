@@ -1,6 +1,4 @@
 (function() {
-    // --- LISTA DE SEGREDOS ---
-    // Cada palavra executa uma ação específica quando digitada
     const segredosARG = {
       "terminal": () => {
         document.getElementById("terminal").style.display = "inline-block";
@@ -41,10 +39,9 @@
           historicoTeclas = historicoTeclas.slice(-tamanhoMaximo);
         }
 
-        // Verifica se o final digitado bate com algum segredo da lista
         for (const [palavra, acao] of Object.entries(segredosARG)) {
           if (historicoTeclas.endsWith(palavra)) {
-            acao(); // Executa a ação correspondente
+            acao();
             historicoTeclas = "";
             break;
           }
